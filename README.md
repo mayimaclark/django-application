@@ -1,6 +1,6 @@
 # django-application
 
-This was a pretty extensive project I did for Internet Programming. The assignment was to design an application Django which included a model, some administrative interface customization, and a single view. The application model was based on a measurements example provided.
+This was a pretty extensive project I did for Internet Programming. The assignment was to design an application using Django which included a model, some administrative interface customization, and a single view. The application model was based on a measurements example provided.
 
 The model has classes Area, Location, Measurement, and Category which each have different returns.
 
