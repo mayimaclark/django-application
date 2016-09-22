@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measurements - Zane Johnston</title>
+</head>
+<body>
+<h1>List of Areas</h1>
+{% if area_list  %}
+<table>
+    <tr>
+        <th>
+           ID
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Number of Locations
+        </th>
+        <th>
+            Average Measurement
+        </th>
+        <th>
+            Categories
+        </th>
+    </tr>
+    {% for a in area_list %}]
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.name }}</td>
+            <td>{{ a.number_of_locations }}</td>
+            <td>{% if a.average_measurement %}
+                    {{ a.average_measurement | floatformat:3 }}
+                {% else %}
+                    --------
+                {% endif %}
+            </td>
+            <td>
+                {{ a.category_names }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+    {% else %}
+    There are no areas.
+{% endif %}
+</body>
+</html>
